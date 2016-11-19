@@ -91,6 +91,13 @@ class Checked(db.Model):
     user_id = Column(UUID, ForeignKey('user.id'))
     item_id = Column(UUID, ForeignKey('item.id'))
 
+class Participent(db.Model):
+    __tablename__ = 'participent'
+    id = Column(UUID, primary_key = True)
+    user_id = Column(UUID, ForeignKey('user.id'))
+    event_id = Column(UUID, ForeignKey('event.id')) 
+
+
 
 if app.config['DROP_DATABASE']:
     db.drop_all()
