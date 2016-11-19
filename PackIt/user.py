@@ -2,6 +2,13 @@ from flask import request, session, render_template, abort, redirect, flash, url
 
 from . import app
 
+# from flask.ext.login import loginManager
+
+# loginManager = LoginManager()
+# loginManager.init_app(app)
+# loginManager.session_protection = "strong"
+# loginManager.login_view = "login"
+
 def get_login():
     return session.get('uid', None)
 
